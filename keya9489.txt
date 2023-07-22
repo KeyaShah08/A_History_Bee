@@ -1,0 +1,46 @@
+
+Name: Keya Shah
+
+Web application Link : https://keyaquiz6.azurewebsites.net/
+
+CSE 6332, Cloud Computing					
+
+
+Quiz Q6, Summer 2023  
+
+ 4. Using the cloud services provider, all functionality possible should be implemented on that provider.
+    (Of course, displaying web pages through a browser and the user interface is "local")
+    The cloud provider is any public cloud service provider.
+
+ 5. Upload all data files (*jpg and *csv, not this quiz) to the cloud service.
+  
+GAME =>
+
+  A History Bee (HB) is a two player game with an additional person as the judge. We will call those P1, P2, and J.
+  The J gives ("sends") each player a question, such as "When was the war of 1812?" P1 and P2 try to respond as quickly as possible,
+  The J sees their responses (if any) and responds to each in time order (first one submitted, if correct, gets points, if not correct,
+  looks at the other player's submission, continue on for a maximum of 4 attempts, or as soon as one is correct.) The J gives feedback
+  to each responce (OK, NO), Each player gives their name at the start, and each player sees both names and the scores.
+  Each player starts with N points (set by J), and a correct answer score +1 point, an incorrect answer -2 points) 
+  To ensure that the game is fair, all questions and responses are logged in a text window that only the J sees, 
+  each line (entry) in the format:
+  [time, originator] message text 
+  for example:
+  [0, Joe] Where is the Alamo?
+  [12, Pat] In Dallas
+  [14, Judge] NO
+  [50, Penny] San Antonio
+  [51, Judge] OK
+  The time may either be in seconds since the game began, or the actual system time if you prefer. On the J screen show current time
+  in either format.
+  The J at anytime may restart the game.
+
+
+ 10. Show the J instance (without logging, yet).
+
+ 11. Show P1 and P2 instances.
+
+ 12. Show us, let us play, the game.
+
+ 
+

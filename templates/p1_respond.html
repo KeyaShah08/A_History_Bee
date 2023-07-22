@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h3, h4 {
+            text-align: center;
+            color: #ff4081;
+            
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f8f8f8;
+            transition: background-color 0.3s ease;
+        }
+
+  
+        table a {
+            text-decoration: none;
+            color: #3366cc;
+            transition: color 0.3s ease;
+        }
+
+       
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ff4081;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+      
+        div {
+            text-align: center;
+            margin-top: 20px;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container-small">
+        <div class="abc">
+            <center><h3 style="font-size: 24px;">CSE 6332 - Quiz 6</h3></center>
+        <center><h4 style="font-size: 24px;">Keya Shah - 1002079489</h4></center><br/>
+        </div>
+    </div>
+    <div class="container">
+        <table>
+
+            <table>
+                <tr>
+                   
+                    <td><a href="/">Home Page</a></td>
+                </tr>
+                <tr>
+                    
+                    <td><a href="/judge">Judge</a></td>
+                </tr>
+                <tr>
+                    
+                    <td><a href="/respond">Answer </a></td>
+                </tr>
+                <tr>
+                    
+                    <td><a href="/p1_respond">p1 Answer </a></td>
+                </tr>
+                <tr>
+                    
+                    <td><a href="/p2_respond">p2 Answer </a></td>
+                </tr>
+                
+
+            
+        </table>
+</div>
+
+    </header>
+    <div >
+        <h3>P2</h3>
+        <div>
+            <!-- p1_respond.html -->
+            <form method="POST">
+                {{ form.csrf_token }}
+
+                <h3>Question:</h3>
+                <p>{{ question }}</p>
+
+                <label>Response:</label>
+                {{ form.response }}
+
+                {{ form.submit_response }}
+            </form>
+
+            <h3>Game Log</h3>
+            <pre>{{ game_log }}</pre>
+
+            <h3>Players</h3>
+            <ul>
+                {% for player, score in scores.items() %}
+                <li>{{ player }}: {{ score }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
